@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+* {
+  font-family: 'Righteous', cursive;
+}
+
+.App {
+  text-align: center;
+}
+
+.containerRegistro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: #2a7b6d;
+  color: aliceblue
+}
+
+.registro {
+  width: 50%;
+  text-align: left;
+}
+
+.containerLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: #f3b600;
+}
+
+.login {
+  width: 50%;
+  text-align: left;
+}
+
+.listGrid {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.one {
+  width: 20%;
+  background: #f3b600;
+  height: 100vh;
+}
+
+.two {
+  width: 80%;
+  background: #D3D3D3;
+  float: right;
+}
+
+.containerUser {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.formulario {
+  margin: 20px;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.gridCards {
+  display: grid;
+  justify-items: center;
+  gap: 10px
+}
+
+@media screen and (min-width:576px) {
+  .gridCards {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .gridCards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.imageCard {
+  border-radius: 4px;
+  width: 200px;
+  height: 200px;
+
+}
+
+.sideGalery {
+  width: 260px;
+  flex-shrink: 0;
+  height: 100%;
+  overflow: auto;
+  margin: 10px;
+}
+
+.borderEdit {
+  border-radius: 10px;
+}
+
+#grid {
+  display: grid;
+  height: calc(100vh - 30px);
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+#item1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#item2 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#item3 {
+  grid-row: span 2 / 7;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.gridOnlyCard {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  grid-template-columns: 1fr;
+}
