@@ -3,8 +3,6 @@ import MyContext from '../MyContext';
 import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import EnVenta from './EnVenta';
-import User from '../components/User';
 
 
 const Formulario = () => {
@@ -28,6 +26,8 @@ const Formulario = () => {
           body: JSON.stringify({ "idusuario": idUser, "titulo": titulo, "imagen": imagen, "descripcion": descripcion, "precio": precio })
         };
         await fetch('https://marketplace-production-8437.up.railway.app/productos', requestAgregarProducto);
+        alert("Se publicó nuevo producto")
+
         navigate("/galeria/")
       } catch (err) {
         console.error(`Error: ${err} `)
@@ -37,14 +37,9 @@ const Formulario = () => {
 
   return (
     <div>
-      <div className="listGrid" key={idUser}>
-        <div className="one">
-          <EnVenta />
-        </div>
-        <div className="two">
-          <div className="containerUser m-4">
-            <User />
-          </div>
+      <div key={idUser}>
+        <div className='publicaciones'>
+
           <Form className='formulario' onSubmit={HandleAgregarProducto}>
             <Form.Group className="mb-3">
               <Form.Control type="text" placeholder="URL imagen" onChange={(e) => setImagen(e.target.value)} />

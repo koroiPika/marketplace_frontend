@@ -23,6 +23,19 @@
   color: aliceblue
 }
 
+.publicaciones {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  color: black
+}
+
+.formulario {
+  width: 70%;
+  text-align: left;
+}
+
 .registro {
   width: 50%;
   text-align: left;
@@ -149,4 +162,10 @@
   justify-items: center;
   gap: 10px;
   grid-template-columns: 1fr;
+}
+
+.gridSidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -12,6 +12,9 @@ import Galeria from './views/Galeria';
 import InfoProducto from './views/InfoProducto';
 import EnVenta from './views/EnVenta';
 import NotFound from './views/NotFound';
+import BarraNavegacion from './components/Navbar';
+
+import Fotter from './components/Fotter';
 
 
 function App() {
@@ -46,9 +49,15 @@ function App() {
       <MyContext.Provider value={globalState}>
         < BrowserRouter >
           < Routes>
-            < Route path="/" element={< Home />} />
             < Route path="/login" element={< Login />} />
             < Route path="/registro" element={< Registro />} />
+
+          </ Routes >
+          < BarraNavegacion />
+
+          < Routes>
+            < Route path="/" element={< Home />} />
+            < Route path="/login" element={< Login />} />
             < Route path="/perfil/:idusuario" element={< Perfil />} />
             < Route path="/formulario" element={< Formulario />} />
             < Route path="/galeria" element={< Galeria />} />
@@ -56,6 +65,7 @@ function App() {
             < Route path="/enventa/:idusuario" element={< EnVenta />} />
             < Route path="*" element={< NotFound />} />
           </ Routes >
+          <Fotter />
         </ BrowserRouter >
       </MyContext.Provider>
     </div>

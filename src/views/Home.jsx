@@ -1,5 +1,4 @@
 import React from "react";
-import BarraNavegacion from "../components/Navbar";
 
 const Home = () => {
 
@@ -10,7 +9,6 @@ const Home = () => {
       backgroundImage: `url(${'https://img.freepik.com/premium-photo/online-shopping-mobile-phone_172660-107.jpg?w=360'})`,
       backgroundSize: 'cover',
     }}>
-      <BarraNavegacion />
       <div style={{
         width: '100%',
         height: '100vh',

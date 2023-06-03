@@ -57,14 +57,14 @@ const Login = () => {
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email"
             name="correo"
-            placeholder="name@example.com"
+            placeholder="developer1@gmail.com"
             onChange={(e) => setCorreoIngresado(e.target.value)} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control type="password"
             name="contrasena"
-            placeholder="******"
+            placeholder="developer"
             onChange={(e) => setContrasenaIngresada(e.target.value)} />
         </Form.Group>
         <Row className="d-flex" >
